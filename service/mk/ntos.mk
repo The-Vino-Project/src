@@ -13,6 +13,9 @@ else
 	CC_TARGET =
 endif
 
+CC	=		\
+	clang
+
 NTOS_CFLAGS =						\
 	-target $(CC_TARGET)			\
 	-ffreestanding					\
