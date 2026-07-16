@@ -75,8 +75,8 @@ typedef BOOLEAN   *PBOOLEAN;
  */
 
 /* Pointer offset macros */
-#define PTR_OFFSET(p, off) ((void *)(char *)(p) + (off))
-#define PTR_NOFFSET(p, off) ((void *)(char *)(p) - (off))
+#define PTR_OFFSET(p, off) ((PVOID)(PCHAR)(p) + (off))
+#define PTR_NOFFSET(p, off) ((PVOID)(PCHAR)(p) - (off))
 
 /* Bit related macros */
 #define BIT(n) (1ULL << (n))
