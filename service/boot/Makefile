@@ -33,7 +33,7 @@ bootmgr: $(OFILES)
 	$(CC) 								\
 		$(LINK_FLAGS)					\
 		$(OFILES)						\
-		-o BOOTX64.EFI
+		-o $(NT_PROJECT_ROOT)/artifacts/BOOTX64.EFI
 
 -include $(DFILES)
 %.o: %.c
