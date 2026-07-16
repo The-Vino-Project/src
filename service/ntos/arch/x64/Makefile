@@ -18,7 +18,7 @@ CFLAGS = 			\
 	-MMD
 
 KERNEL_OUTPUT = 					\
-	$(NT_PROJECT_ROOT)/ntoskrnl.sys
+	$(NT_PROJECT_ROOT)/artifacts/ntoskrnl.sys
 
 .PHONY: all
 all: $(KERNEL_OUTPUT)
