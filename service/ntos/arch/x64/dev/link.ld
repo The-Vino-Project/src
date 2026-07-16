@@ -38,7 +38,8 @@ SECTIONS {
     . += CONSTANT(MAXPAGESIZE);
 
     .bss : ALIGN(4K) {
-        *(.rdata .rdata.*)
+        *(COMMON)
+        *(.bss .bss.*)
     }
 
     . += CONSTANT(MAXPAGESIZE);
