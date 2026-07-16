@@ -1,0 +1,29 @@
+/*
+ * Copyright (c) 2026, pinrip, rixel, et al.
+ *
+ * Abstract:
+ *      MI boot manager entrypoint
+ * Author:
+ *      Chloe Pinrip
+ */
+
+#include <efi/efi.h>
+
+/* Globals */
+EFI_BOOT_SERVICES *gBS;
+EFI_SYSTEM_TABLE *gST;
+EFI_HANDLE gImageHandle;
+
+/*
+ * Main EFI application entrypoint
+ */
+EFI_STATUS
+EFIAPI
+BmMain(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *SystemTable)
+{
+    gImageHandle = ImageHandle;
+    gST = SystemTable;
+    gBS = SystemTable->BootServices;
+
+    for (;;);
+}
