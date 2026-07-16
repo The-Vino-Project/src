@@ -33,5 +33,11 @@ BmMain(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *SystemTable)
         NULL
     );
 
+    /* Reset the console */
+    gST->ConOut->Reset(
+        gST->ConOut,
+        FALSE
+    );
+
     for (;;);
 }
