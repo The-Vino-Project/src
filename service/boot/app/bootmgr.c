@@ -25,5 +25,13 @@ BmMain(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *SystemTable)
     gST = SystemTable;
     gBS = SystemTable->BootServices;
 
+    /* Disable the watchdog timer */
+    gBS->SetWatchdogTimer(
+        0,
+        0,
+        0,
+        NULL
+    );
+
     for (;;);
 }
