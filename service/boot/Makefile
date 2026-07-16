@@ -7,17 +7,15 @@
 # 	Chloe Pinrip
 #
 
+include ../mk/ntos.mk
+
 CC = clang
 
 CFLAGS =							\
-	-target x86_64-windows-unknown 	\
-	-ffreestanding 					\
-	-nostdlib 						\
-	-MMD							\
-	-I$(NT_PROJECT_ROOT)/sdk/head
+	$(NTOS_CFLAGS)
 
 LINK_FLAGS = 						\
-	-target x86_64-windows-unknown 	\
+	-target $(CC_TARGET)			\
 	-ffreestanding 					\
 	-nostdlib 						\
 	-fuse-ld=lld 					\
