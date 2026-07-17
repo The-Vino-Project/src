@@ -16,7 +16,7 @@ SECTIONS {
      * the execution.
      */
     . = 1M;
-    __PeHdrStart = .;
+    __PeStart = .;
     . += SIZEOF_HEADERS;
 
     .text : ALIGN(4K) {
