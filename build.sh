@@ -55,6 +55,9 @@ build() {
     make_build          \
         service/boot/   \
         "Building bootloader..."
+
+    echo "[*] Generating image..."
+    ./tools/gen-img.sh
 }
 
 # Verify all deps
