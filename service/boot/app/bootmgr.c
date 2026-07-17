@@ -8,6 +8,7 @@
  */
 
 #include <efi/efi.h>
+#include <boot/bootlib.h>
 
 /* Globals */
 EFI_BOOT_SERVICES *gBS;
@@ -39,5 +40,6 @@ BmMain(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *SystemTable)
         FALSE
     );
 
+    PrintRaw(L"bootmgr - " BOOTMGR_VERSION "\r\n");
     for (;;);
 }
