@@ -24,6 +24,12 @@
         (Str)                       \
     )
 
+/*
+ * Halt and catch fire when something goes wrong during
+ * boot.
+ */
+VOID BootHcf(VOID);
+
 /* Externs */
 extern EFI_BOOT_SERVICES *gBS;
 extern EFI_SYSTEM_TABLE *gST;
