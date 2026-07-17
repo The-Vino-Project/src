@@ -10,6 +10,8 @@
 #ifndef _BOOT_BOOTLIB_H_
 #define _BOOT_BOOTLIB_H_ 1
 
+#include <efi/efi.h>
+
 /* Boot manager version */
 #define BOOTMGR_VERSION "v0.0.1"
 
@@ -21,5 +23,10 @@
         gST->ConOut,                \
         (Str)                       \
     )
+
+/* Externs */
+extern EFI_BOOT_SERVICES *gBS;
+extern EFI_SYSTEM_TABLE *gST;
+extern EFI_HANDLE gImageHandle;
 
 #endif  /* !_BOOT_BOOTLIB_H_ */
