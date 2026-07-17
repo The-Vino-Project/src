@@ -12,7 +12,8 @@ include ../mk/ntos.mk
 CC = clang
 
 CFLAGS =							\
-	$(NTOS_CFLAGS)
+	$(NTOS_CFLAGS)					\
+	-Ihead/
 
 LINK_FLAGS = 						\
 	-target $(CC_TARGET)			\
