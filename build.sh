@@ -48,6 +48,12 @@ make_build() {
 build() {
     mkdir -p artifacts/
 
+    if [ -z "${NT_BUILD_SOURCED}" ]
+    then
+        echo -e "fatal: Please run '. service/dev/build.env' first!"
+        exit 1
+    fi
+
     make_build          \
         service/ntos    \
         "Building kernel..."
