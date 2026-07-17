@@ -7,6 +7,8 @@
  *      Chloe Pinrip
  */
 
+#include <boot/bootlib.h>
+
 /*
  * XXX: Should potentially halt the processor core using some
  *      MI/MD bridge.
